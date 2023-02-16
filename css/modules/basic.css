@@ -1,0 +1,134 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  /* This sets 1rem = 10px (easier to calculate in rem) */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.2;
+  background-color: #201d27;
+  scrollbar-width: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+:root {
+  --page-width-large: 1200px;
+  --page-width-medium: 768px;
+  --page-width-small: 320px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* ---- RESETS FOR HTML ELEMENTS ------ */
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* ---- UTILITY CLASSES ------ */
+.btn {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  border: none;
+  height: 4.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.2rem;
+  cursor: pointer;
+}
+
+.btn--green {
+  background-color: #29a643;
+  color: #fff;
+}
+
+.btn--gray {
+  background: #cccccc;
+  color: #fff;
+}
+
+.color-red {
+  color: #d51820;
+}
+
+.form-group {
+  display: grid;
+  width: 100%;
+}
+
+.form-group label {
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.form-group input {
+  height: 40px;
+  background: #f7f7f7;
+  border: 1px solid #a9a9a9;
+  outline: none;
+  color: #000;
+  font-size: 1.4rem;
+  padding: 1rem;
+}
+
+.form-group input.valid {
+  border: 1px solid #29a643;
+}
+
+.form-group input.invalid {
+  border: 1px solid #d51820;
+}
+
+.verification-message {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.verification-message:not(:last-child) {
+  margin-bottom: 0.8rem;
+}
+
+.verification-message.invalid {
+  color: #d51820;
+}
+
+.verification-message.valid {
+  color: #29a643;
+}
+
+.verification-message.normal {
+  color: #959595;
+}
+
+.verification-message i {
+  font-size: 1rem;
+}
+
+.verification-message__text {
+  font-size: 1.2rem;
+}
+
+.hidden {
+  display: none;
+}

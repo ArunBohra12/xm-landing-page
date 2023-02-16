@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet" />
+
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" /> -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- CSS links -->
+    <link rel="stylesheet" href="./css/index.css" />
+
+    <!-- Fontawesome Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+
+    <title>XM Exercise</title>
+  </head>
+  <body>
+    <div class="body-wrapper">
+      <!-- =============== Navbar =============== -->
+      <nav class="navbar">
+        <div class="navbar__content">
+          <div class="navbar__logo">
+            <a href="/">
+              <img class="navbar__logo-img" src="./assets/img/logo.svg" alt="XM" />
+            </a>
+          </div>
+
+          <ul class="navbar__list">
+            <li class="navbar__list-item">
+              <a class="navbar__link" href="/">XM Homepage</a>
+            </li>
+            <li class="navbar__list-item">
+              <a class="navbar__link" href="/support"> Support </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <header class="header">
+        <div class="header__overlay"></div>
+        <div class="header__wrapper">
+          <img src="./assets/img/intersect-purple.png" alt="" class="header__intersect-purple" />
+          <img class="header__gold-number-angle-3" src="./assets/img/gold-number-angle-3.png" alt="" />
+          <img class="header__cube-glass" src="./assets/img/cube-glass.png" alt="" />
+          <img class="header__intersect" src="./assets/img/intersect-blue.png" alt="" />
+          <img class="header__cup-glass" src="./assets/img/cup-glass.png" alt="" />
+          <img class="header__gold-number-0" src="./assets/img/gold-number-0.png" alt="" />
+          <img class="header__blurred-cube" src="./assets/img/cube-glass-blurred.png" alt="" />
+          <img class="header__perforated-ring" src="./assets/img/perforated-ring-glass.png" alt="" />
+
+          <div class="header__content">
+            <div class="header__label">Trade With</div>
+            <h1 class="header__title">
+              <span class="header__title-text">
+                <span class="header__title-text--bold"> Zero Swaps</span> on All XM Ultra Low
+              </span>
+              <span class="header__title-text">Accounts for more than 25 instruments!</span>
+            </h1>
+
+            <p class="header__summary">
+              <span class="header__summary-text"
+                >Enjoy spreads <b>as low as 0.6 pips</b> and <b>leverage up to 1000:1</b> on</span
+              >
+              <span class="header__summary-text"
+                >instruments like <b>EURUSD, USDJPY, EURJPY, GBPUSD,</b> and <b>Gold.</b></span
+              >
+            </p>
+
+            <button class="header__button btn btn--green">OPEN ACCOUNT</button>
+
+            <div class="header__footer">
+              New to trading? <a class="header__footer-link" href="#">Try a Demo account.</a>
+            </div>
+
+            <p class="header__terms-and-conditions">
+              Terms and Conditions apply<span class="color-red">*</span>. To read the full T&Cs,
+              <a href="#"><span class="color-red">click here.</span></a>
+            </p>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        <div class="currencies">
+          <div class="currency" id="bitcoin">
+            <div class="currency__info">
+              <img src="./assets/icons/bitcoin-icon.png" alt="Bitcoin" class="currency__icon" />
+              <div class="currency__symbol"></div>
+              <div class="currency__name"></div>
+            </div>
+            <div class="crurrency__divider"></div>
+            <div class="currency__data">
+              <div class="currency__price"></div>
+              <div class="currency__change"></div>
+            </div>
+          </div>
+
+          <div class="currency" id="ethereum">
+            <div class="currency__info">
+              <img src="./assets/icons/ethereum-icon.png" alt="Ethereum" class="currency__icon" />
+              <div class="currency__symbol"></div>
+              <div class="currency__name"></div>
+            </div>
+            <div class="crurrency__divider"></div>
+            <div class="currency__data">
+              <div class="currency__price"></div>
+              <div class="currency__change"></div>
+            </div>
+          </div>
+
+          <div class="currency" id="ripple">
+            <div class="currency__info">
+              <img src="./assets/icons/ripple-icon.png" alt="Ripple" class="currency__icon" />
+              <div class="currency__symbol"></div>
+              <div class="currency__name"></div>
+            </div>
+            <div class="crurrency__divider"></div>
+            <div class="currency__data">
+              <div class="currency__price"></div>
+              <div class="currency__change"></div>
+            </div>
+          </div>
+
+          <div class="currency" id="litecoin">
+            <div class="currency__info">
+              <img src="./assets/icons/litecoin-icon.png" alt="Litecoin" class="currency__icon" />
+              <div class="currency__symbol"></div>
+              <div class="currency__name"></div>
+            </div>
+            <div class="crurrency__divider"></div>
+            <div class="currency__data">
+              <div class="currency__price"></div>
+              <div class="currency__change"></div>
+            </div>
+          </div>
+
+          <div class="currency" id="bitcoin-cash">
+            <div class="currency__info">
+              <img src="./assets/icons/bitcoin-cash-icon.png" alt="Bitcoin Cash" class="currency__icon" />
+              <div class="currency__symbol"></div>
+              <div class="currency__name"></div>
+            </div>
+            <div class="crurrency__divider"></div>
+            <div class="currency__data">
+              <div class="currency__price"></div>
+              <div class="currency__change"></div>
+            </div>
+          </div>
+        </div>
+
+        <section class="features">
+          <h2 class="features__heading">Why <span class="features__heading-text--bold">Trade</span> with XM?</h2>
+          <p class="features__paragraph">
+            We have been providing traders around the world with the same
+            <span class="features__paragraph-text--bold">premium experience</span> for over a decade. As an
+            <span class="features__paragraph-text--bold">industry-leader,</span> we know what the modern trader needs to
+            be <span class="features__paragraph-text--bold">successful</span> in the markets.
+          </p>
+
+          <div class="features__cards">
+            <div class="features__card">
+              <h3 class="features__card-heading">Superior Trade Execution</h3>
+
+              <div class="features__card-details">
+                99% of trades are executed in
+                <span class="features__card-details-text--bold">less than a second,</span> with no requotes or
+                rejections.
+              </div>
+
+              <img src="./assets/icons/fast-execusion-icon.png" alt="Fast Execution" class="features__card-image" />
+            </div>
+
+            <div class="features__card">
+              <h3 class="features__card-heading">Competitive Pricing</h3>
+
+              <div class="features__card-details">
+                We offer some of the
+                <span class="features__card-details-text--bold">lowest spreads</span>
+                and we don't charge commissions. rejections.
+              </div>
+
+              <img
+                src="./assets/icons/competitive-pricing-icon.png"
+                alt="Fast Execution"
+                class="features__card-image" />
+            </div>
+
+            <div class="features__card">
+              <h3 class="features__card-heading">Advanced Technology</h3>
+
+              <div class="features__card-details">
+                Trade on
+                <span class="features__card-details-text--bold">MT4</span>
+                or
+                <span class="features__card-details-text--bold">MT5,</span>
+                with expert tools, across desktop, web and mobile.
+              </div>
+
+              <img src="./assets/icons/tech-icon.png" alt="Fast Execution" class="features__card-image" />
+            </div>
+
+            <div class="features__card">
+              <h3 class="features__card-heading">Start with $5</h3>
+
+              <div class="features__card-details">
+                Start trading your preferred instruments with as little as a
+                <span class="features__card-details-text--bold">$5 minimum deposit.</span>
+              </div>
+
+              <img src="./assets/icons/dollar-icon.png" alt="Fast Execution" class="features__card-image" />
+            </div>
+          </div>
+        </section>
+
+        <section class="register">
+          <h2 class="register__heading">- Register Here -</h2>
+          <p class="register__slogan">Join us to celebrate our biggest night of the year.</p>
+
+          <div class="register__event-info">
+            <div class="register__event">
+              <i class="event__icon fa-regular fa-calendar-check"></i>
+              <p class="event__text">05 NOVEMBER 2022</p>
+            </div>
+
+            <div class="register__event">
+              <i class="event__icon fa-regular fa-clock"></i>
+              <p class="event__text">16:00 &mdash; 23:00</p>
+            </div>
+
+            <div class="register__event">
+              <i class="event__icon fa-solid fa-location-dot"></i>
+              <p class="event__text">Centara Grand & Bangkok Convention Centre, Bangkok</p>
+            </div>
+          </div>
+
+          <form class="register__form">
+            <div class="register__inputs">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" autocomplete="off" />
+
+                <div
+                  class="register__email-verification-message verification-message invalid hidden"
+                  id="invalid-email-message">
+                  <i class="fa-solid fa-circle-dot"></i>
+                  <p class="verification-message__text">Please enter a valid email</p>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" />
+
+                <div class="register__password-verification-message">
+                  <div class="verification-message normal" id="password-validation-msg-length">
+                    <i class="fa-solid fa-circle-dot"></i>
+                    <p class="verification-message__text">8 - 15 characters</p>
+                  </div>
+
+                  <div class="verification-message normal" id="password-validation-msg-number">
+                    <i class="fa-solid fa-circle-dot"></i>
+                    <p class="verification-message__text">1 or more numbers</p>
+                  </div>
+
+                  <div class="verification-message normal" id="password-validation-msg-uppercase">
+                    <i class="fa-solid fa-circle-dot"></i>
+                    <p class="verification-message__text">1 or more upper case letters</p>
+                  </div>
+
+                  <div class="verification-message normal" id="password-validation-msg-lowercase">
+                    <i class="fa-solid fa-circle-dot"></i>
+                    <p class="verification-message__text">1 or more lower case letters</p>
+                  </div>
+
+                  <div class="verification-message normal" id="password-validation-msg-special-character">
+                    <i class="fa-solid fa-circle-dot"></i>
+                    <p class="verification-message__text">1 or more special characters (#[]()@$&*!?|,.^/\+_-)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="registration__success hidden">
+              <div class="registration__success-message">
+                <i class="registration__success-icon fa-solid fa-circle-check"></i>
+                <h3 class="registration__success-text">Registration Successful</h3>
+              </div>
+
+              <div class="registration__success-description">
+                <i class="fa-solid fa-caret-right"></i>
+                <p>
+                  Thank you for registering for our event with XM. You will receive an email shortly with confirmation
+                  of your registration.
+                </p>
+              </div>
+            </div>
+
+            <button class="register__button btn btn--gray" type="submit" disabled id="register-button">
+              REGISTER NOW
+            </button>
+          </form>
+
+          <div class="register__footer">
+            <div class="register__no-account">
+              Don't have an account?
+              <a href="#" class="register__no-account-link color-red">Create one here</a> and register for the event
+            </div>
+            <div class="register__terms-and-conditions">
+              Terms and Conditions apply<span class="color-red">*</span>. To read the full T&Cs, click
+              <a href="#"><span class="color-red">here</span></a
+              >.
+            </div>
+          </div>
+        </section>
+
+        <section class="event__gallery">
+          <h2 class="event__gallery-heading">Event Gallery</h2>
+
+          <div class="event__gallery-slider">
+            <div class="event__gallery-slider-btn slider-btn-prev">
+              <i class="fa-solid fa-chevron-left"></i>
+            </div>
+            <div class="event__gallery-slider-btn slider-btn-next">
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="event__gallery-event event"></div>
+            <div class="event__gallery-event event"></div>
+
+            <div class="event__gallery-event event"></div>
+            <div class="event__gallery-event event"></div>
+            <div class="event__gallery-event event"></div>
+          </div>
+        </section>
+
+        <section class="why-xm">
+          <div class="why-xm__content">
+            <div class="why-xm__header">
+              <h2 class="why-xm__heading">
+                Big<span class="color-red">.</span> Fair<span class="color-red">.</span> Human<span class="color-red"
+                  >.</span
+                >
+              </h2>
+
+              <p class="why-xm__summary">
+                Learn why <span class="why-xm__summary--bold">over 5 million clients choose XM</span> as their trusted
+                online broker.
+              </p>
+            </div>
+
+            <div class="why-xm__qualities">
+              <div class="xm-quality">
+                <img class="xm-quality__icon" src="./assets/icons/authorized-icon.png" alt="Authorised and Regulated" />
+                <div class="xm-quality__heading">Authorised and Regulated</div>
+                <div class="xm-quality__description">
+                  At XM, we adhere to all regulatory standards and are fully authorised and regulated by FSC.
+                </div>
+              </div>
+
+              <div class="xm-quality">
+                <img class="xm-quality__icon" src="./assets/icons/committed-icon.png" alt="Committed and Fair" />
+                <div class="xm-quality__heading">Committed and Fair</div>
+                <div class="xm-quality__description">
+                  We operate with complete transparency and adhere to the highest professional and ethical standards.
+                </div>
+              </div>
+
+              <div class="xm-quality">
+                <img class="xm-quality__icon" src="./assets/icons/award.png" alt="Multi-Award-Winning" />
+                <div class="xm-quality__heading">Multi-Award-Winning</div>
+                <div class="xm-quality__description">
+                  Over the years we have received over 40 awards for the quality of our products and services.
+                </div>
+              </div>
+
+              <div class="xm-quality">
+                <img class="xm-quality__icon" src="./assets/icons/24-7-icon.png" alt="24/7 Support" />
+                <div class="xm-quality__heading">24/7 Support</div>
+                <div class="xm-quality__description">
+                  Our support agents are on hand 24/7 to answer your questions or assist you with any issues.
+                </div>
+              </div>
+
+              <div class="why-xm-lines">
+                <div class="why-xm__line-long why-xm__line-horizontal"></div>
+                <div class="why-xm__line-long why-xm__line-vertical"></div>
+                <div class="why-xm__line-short why-xm__line-horizontal"></div>
+                <div class="why-xm__line-short why-xm__line-vertical"></div>
+                <div class="why-xm__lines-focus"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- =============== Footer =============== -->
+      <footer class="footer">
+        <div class="footer__content">
+          <div class="footer_socials">
+            <div class="footer__companies">
+              <img
+                class="footer__company-img"
+                height="26"
+                width="136"
+                src="./assets/img/meta-quotes-logo.png"
+                alt="Meta Quotes" />
+              <img
+                class="footer__company-img"
+                height="36"
+                width="131"
+                src="./assets/img/verisign-logo.png"
+                alt="Verisign" />
+              <img
+                class="footer__company-img"
+                height="38"
+                width="110"
+                src="./assets/img/unicef-logo.png"
+                alt="unicef champion for children" />
+              <img
+                class="footer__company-img"
+                height="37"
+                width="195"
+                src="./assets/img/investors-in-people-logo.png"
+                alt="Investors In People" />
+            </div>
+
+            <div class="social-media">
+              <div class="social-media__follow-text">Follow us on</div>
+              <ul class="social-media__list">
+                <li class="social-media__list-item">
+                  <a href="#" class="social-media__link">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li class="social-media__list-item">
+                  <a href="#" class="social-media__link">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="social-media__list-item">
+                  <a href="#" class="social-media__link">
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                </li>
+                <li class="social-media__list-item">
+                  <a href="#" class="social-media__link">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                </li>
+                <li class="social-media__list-item">
+                  <a href="#" class="social-media__link">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer__divider"></div>
+
+          <div class="footer__company">
+            <div class="footer__policies">
+              <div class="footer_policies-item">
+                <a href="#" class="footer_policies-link">Privacy Policy</a>
+              </div>
+              |
+              <div class="footer_policies-item">
+                <a href="#" class="footer_policies-link">Cookie Policy</a>
+              </div>
+              |
+              <div class="footer_policies-item">
+                <a href="#" class="footer_policies-link">Terms and Conditions</a>
+              </div>
+            </div>
+
+            <div class="footer__company-logo">
+              <img src="./assets/img/trading-point-logo.png" class="footer__company-logo-image" alt="Trading Point" />
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+.navbar {
+  background-color: #000000;
+}
+
+.navbar__content {
+  justify-content: center;
+  max-width: var(--page-width-large);
+  margin: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 3rem;
+}
+
+.navbar__logo-img {
+  width: 14rem;
+}
+
+.navbar__list {
+  display: none;
+  list-style-type: none;
+  gap: 4rem;
+  font-size: 1.5rem;
+  margin-right: 2rem;
+}
+
+.navbar__link {
+  color: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar__content {
+    justify-content: space-between;
+  }
+
+  .navbar__list {
+    display: flex;
+  }
+}
