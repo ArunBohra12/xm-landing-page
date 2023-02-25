@@ -53,6 +53,24 @@ const setAllCurrencies = async () => {
   });
 };
 
+/**
+ * It sets the state of the input element in the UI
+ * @param state - the state of the input, can be 'valid', 'invalid' or 'normal'
+ * @param element - The element you want to change the state of.
+ */
+const setInputState = (state, element) => {
+  const states = {
+    valid: 'valid',
+    invalid: 'invalid',
+    normal: 'normal',
+  };
+
+  if (!element) return;
+
+  element.classList.remove('invalid', 'valid', 'normal');
+  states[state] && element.classList.add(states[state]);
+};
+
 // Submit the form
 const formSubmitHandler = (e) => {
   e.preventDefault();
@@ -67,16 +85,15 @@ const formSubmitHandler = (e) => {
 
   // reset password error messages
   for (let elementKey in passwordErrorMessageElements) {
-    passwordErrorMessageElements[elementKey].classList.remove('invalid', 'valid');
-    passwordErrorMessageElements[elementKey].classList.add('normal');
+    setInputState('normal', passwordErrorMessageElements[elementKey]);
   }
 
   // reset the email input
-  emailInput.classList.remove('invalid', 'valid');
+  setInputState('normal', emailInput);
   emailErrorMessage.classList.add('hidden');
 
   // reset password input
-  passwordInput.classList.remove('invalid', 'valid');
+  setInputState('normal', passwordInput);
 
   emailInput.value = '';
   passwordInput.value = '';
@@ -113,24 +130,21 @@ const checkRegisterButton = () => {
 const emailInputChangeHandler = (e) => {
   const email = e.target.value;
 
+  checkRegisterButton();
+
   if (email === '') {
-    emailInput.classList.remove('invalid', 'valid');
-    emailErrorMessage.classList.add('hidden');
+    setInputState('normal', emailInput);
     return;
   }
 
   if (!validateEmail(email)) {
-    emailInput.classList.remove('valid');
-    emailInput.classList.add('invalid');
+    setInputState('invalid', emailInput);
     emailErrorMessage.classList.remove('hidden');
     return;
   }
 
-  emailInput.classList.remove('invalid');
-  emailInput.classList.add('valid');
+  setInputState('valid', emailInput);
   emailErrorMessage.classList.add('hidden');
-
-  checkRegisterButton();
 };
 
 /**
@@ -139,13 +153,13 @@ const emailInputChangeHandler = (e) => {
 const passwordInputChangeHandler = (e) => {
   const password = e.target.value;
 
+  checkRegisterButton();
+
   if (password === '') {
-    passwordInput.classList.remove('invalid', 'valid');
-    passwordInput.classList.add('normal');
+    setInputState('normal', passwordInput);
 
     for (let elementKey in passwordErrorMessageElements) {
-      passwordErrorMessageElements[elementKey].classList.remove('invalid', 'valid');
-      passwordErrorMessageElements[elementKey].classList.add('normal');
+      passwordErrorMessageElements[elementKey] && setInputState('normal', passwordErrorMessageElements[elementKey]);
     }
 
     return;
@@ -161,25 +175,16 @@ const passwordInputChangeHandler = (e) => {
 
     if (!element) continue;
 
-    if (validationRules[rule]) {
-      element.classList.remove('normal', 'invalid');
-      element.classList.add('valid');
-    } else {
-      element.classList.remove('normal', 'valid');
-      element.classList.add('invalid');
-    }
+    const elementState = validationRules[rule] ? 'valid' : 'invalid';
+    setInputState(elementState, element);
   }
 
   if (passwordScore !== 5) {
-    passwordInput.classList.remove('normal', 'valid');
-    passwordInput.classList.add('invalid');
+    setInputState('invalid', passwordInput);
     return;
   }
 
-  passwordInput.classList.remove('normal', 'invalid');
-  passwordInput.classList.add('valid');
-
-  checkRegisterButton();
+  setInputState('valid', passwordInput);
 };
 
 // ------------------------------------------------------
